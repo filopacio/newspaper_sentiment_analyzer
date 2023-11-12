@@ -29,11 +29,11 @@ class NewsPaperSentimentAnalyzer:
                 print(f"Error encoding image: {e}")
                 raise
 
-    def prompt_analysis(self, prompt, image_path):
+    def prompt_analysis(self, prompt, image_input):
         """
         Manage request, connection and executes prompt
         """
-        base64_image = self.encode_image(image_path)
+        base64_image = self.encode_image(image_input)
 
         headers = {
             "Content-Type": "application/json",
