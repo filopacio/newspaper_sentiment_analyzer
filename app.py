@@ -9,8 +9,6 @@ MODEL = parameters['model']
 SENTIMENT_CATEGORIES = parameters['sentiment_categories']
 PROMPT = parameters['prompt'].format(len(SENTIMENT_CATEGORIES), SENTIMENT_CATEGORIES)
 
-import streamlit as st
-from newspaper_analyzer import NewsPaperSentimentAnalyzer
 
 def main():
     st.title("NewsPaper Sentiment Analyzer")
