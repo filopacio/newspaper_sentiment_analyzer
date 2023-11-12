@@ -14,13 +14,15 @@ def main():
     st.title("NewsPaper Sentiment Analyzer")
 
     # Use st.file_uploader to get the uploaded file
+    api_key = st.text_input("Enter your API Key", type="password")
+    
     uploaded_file = st.file_uploader("Upload an image", type=["jpg", "jpeg"])
 
     if uploaded_file:
         st.write("Image Uploaded. Press Analyze to get results.")
 
         if st.button("Analyze"):
-            analyzer = NewsPaperSentimentAnalyzer()
+            analyzer = NewsPaperSentimentAnalyzer(api_key=api_key)
 
             # Assuming a default prompt for simplicity, you can customize this as needed
             prompt = PROMPT
@@ -32,6 +34,8 @@ def main():
             # (you may need to adapt this part based on your response_data structure)
             st.subheader("Result")
             st.json(response_data)
+
+
 
 if __name__ == "__main__":
     main()
