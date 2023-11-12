@@ -17,7 +17,8 @@ class NewsPaperSentimentAnalyzer:
         """
         Encodes jpeg image into readable format
         """
-        with open(image_path, "rb") as image_file:
+        absolute_path = os.path.abspath(image_path)
+        with open(absolute_path, "rb") as image_file:
             return base64.b64encode(image_file.read()).decode('utf-8')
 
     def prompt_analysis(self, prompt, image_path):
