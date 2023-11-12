@@ -17,6 +17,13 @@ def main():
     api_key = st.text_input("Enter your API Key", type="password")
     
     uploaded_file = st.file_uploader("Upload an image", type=["jpg", "jpeg"])
+    
+    st.image(uploaded_file, caption="Uploaded Image", use_column_width=True)
+
+        # Optionally, you can perform additional operations on the image
+        # For example, you can use Pillow to process the image
+    image = Image.open(uploaded_file)
+    st.write("Image Size:", image.size)
 
     if uploaded_file:
         st.write("Image Uploaded. Press Analyze to get results.")
