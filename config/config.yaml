@@ -1,0 +1,30 @@
+temperature: 0.1
+
+max_tokens: 200
+
+model: "gpt-4-vision-preview"
+
+sentiment_categories:
+    - 'War & Peace'
+    - 'Economic Stability'
+    - 'Technological Trends'
+    - 'Social Movements'
+    - 'Health & Epidemics'
+    - 'Political Dynamics'
+    - 'Cultural Shifts'
+    - 'Global Relations'
+    - 'Scientific Progress'
+    - 'Education & Knowledge'
+    - 'Religious Landscape'
+    - 'Migrations & Immigration'
+    - 'Government Policies'
+    - 'Natural Disasters'
+    - 'Local Community Events'
+
+prompt: "
+You are an historian analyzing sentiments in old newspapers. You will extract as much textual information as you can 
+and you will extract insights on {} categories. You will assign a score to each of these categories from -1 to 1, where 
+-1 represent extreme negative sentiment and 1 extreme positive sentiment about that topic category. You MUST return 
+ONLY a dictionary with categories as keys and the scores as the values and an additional entry 'date' which will contain 
+the date of when the newspaper was written in the format '%d-%m-%yy' and will be the first key of the dictionary. Here 
+are the categories: {}"
