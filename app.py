@@ -9,26 +9,31 @@ MODEL = parameters['model']
 SENTIMENT_CATEGORIES = parameters['sentiment_categories']
 PROMPT = parameters['prompt'].format(len(SENTIMENT_CATEGORIES), SENTIMENT_CATEGORIES)
 
+import streamlit as st
+from newspaper_analyzer import NewsPaperSentimentAnalyzer
 
 def main():
     st.title("NewsPaper Sentiment Analyzer")
 
-    API_KEY = st.text_input("Enter your API Key", type="password")
-
+    # Use st.file_uploader to get the uploaded file
     uploaded_file = st.file_uploader("Upload an image", type=["jpg", "jpeg"])
 
-    if API_KEY and uploaded_file:
-        st.write("API Key and Image Uploaded. Press Analyze to get results.")
+    if uploaded_file:
+        st.write("Image Uploaded. Press Analyze to get results.")
 
         if st.button("Analyze"):
-            analyzer = NewsPaperSentimentAnalyzer(API_KEY)
+            analyzer = NewsPaperSentimentAnalyzer()
 
-            response_data = analyzer.prompt_analysis(PROMPT, uploaded_file)
-            categories_scores = analyzer.transform_to_dataframe(response_data)
+            # Assuming a default prompt for simplicity, you can customize this as needed
+            prompt = "What is the sentiment of this newspaper?"
 
-            st.subheader("Categories Scores")
-            st.table(categories_scores)
+            # Analyze the image and get the response data
+            response_data = analyzer.prompt_analysis(prompt, uploaded_file)
 
+            # Process the response data and display scores
+            # (you may need to adapt this part based on your response_data structure)
+            st.subheader("Result")
+            st.json(response_data)
 
 if __name__ == "__main__":
     main()
