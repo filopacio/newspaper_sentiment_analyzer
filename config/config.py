@@ -15,4 +15,4 @@ API_KEY_PATH = SRC_DIR / 'config/api_key.yaml'
 
 
 parameters = read_yaml(CONFIG_PATH)
-api_key = read_yaml(API_KEY_PATH)['api_key']
+#api_key = read_yaml(API_KEY_PATH)['api_key']
