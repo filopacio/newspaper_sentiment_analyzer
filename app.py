@@ -23,7 +23,7 @@ def main():
             analyzer = NewsPaperSentimentAnalyzer()
 
             # Assuming a default prompt for simplicity, you can customize this as needed
-            prompt = "What is the sentiment of this newspaper?"
+            prompt = PROMPT
 
             # Analyze the image and get the response data
             response_data = analyzer.prompt_analysis(prompt, uploaded_file)
