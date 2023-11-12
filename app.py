@@ -17,7 +17,7 @@ def main():
     api_key = st.text_input("Enter your API Key", type="password")
     
     uploaded_file = st.file_uploader("Upload an image", type=["jpg", "jpeg"])
-
+    print(uploaded_file)
     if uploaded_file:
         st.write("Image Uploaded. Press Analyze to get results.")
 
