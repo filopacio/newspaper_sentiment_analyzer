@@ -14,13 +14,21 @@ class NewsPaperSentimentAnalyzer:
         self.temperature = temperature
         self.model = model
 
-    def encode_image(self, image_path):
-        """
-        Encodes jpeg image into readable format
-        """
-        absolute_path = os.path.abspath(image_path)
-        with open(absolute_path, "rb") as image_file:
-            return base64.b64encode(image_file.read()).decode('utf-8')
+        def encode_image(self, image_input):
+        try:
+            # Check if the input is a file path or a file-like object
+            if isinstance(image_input, str):  # If it's a string, assume it's a file path
+                with open(image_input, "rb") as image_file:
+                    image_data = image_file.read()
+            elif hasattr(image_input, 'read'):  # If it has a 'read' method, assume it's a file-like object
+                image_data = image_input.read()
+            else:
+                raise ValueError("Invalid input. Provide a file path or a file-like object.")
+
+            return base64.b64encode(image_data).decode('utf-8')
+        except Exception as e:
+            print(f"Error encoding image: {e}")
+            raise
 
     def prompt_analysis(self, prompt, image_path):
         """
