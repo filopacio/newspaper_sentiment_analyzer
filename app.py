@@ -35,7 +35,7 @@ def main():
             extracted_text = matches[0].strip().replace('json', '')
             data_dict = json.loads(extracted_text)
             
-            df = pd.DataFrame([data_dict])
+            df = pd.DataFrame(data_dict)
 
             st.subheader("Result")
             st.dataframe(df)
