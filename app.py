@@ -27,8 +27,7 @@ def main():
 
 
             response_data = analyzer.prompt_analysis(PROMPT, uploaded_file)
-            st.write(response_data)
-            df = pd.DataFrame(response_data)
+            df = pd.DataFrame([response_data])
 
             st.subheader("Result")
             st.dataframe(df)
