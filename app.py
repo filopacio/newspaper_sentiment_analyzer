@@ -13,7 +13,7 @@ PROMPT = parameters['prompt'].format(len(SENTIMENT_CATEGORIES), SENTIMENT_CATEGO
 def main():
     st.title("NewsPaper Sentiment Analyzer")
 
-    api_key = st.text_input("Enter your API Key", type="password")
+    API_KEY = st.text_input("Enter your API Key", type="password")
     
     uploaded_file = st.file_uploader("Upload an image", type=["jpg", "jpeg"])
     
@@ -22,19 +22,23 @@ def main():
         st.write("Image Uploaded. Press Analyze to get results.")
 
         if st.button("Analyze"):
-            analyzer = NewsPaperSentimentAnalyzer(api_key=api_key)
+            analyzer = NewsPaperSentimentAnalyzer(api_key=API_KEY)
 
-            # Assuming a default prompt for simplicity, you can customize this as needed
-            prompt = PROMPT
 
-            # Analyze the image and get the response data
-            response_data = analyzer.prompt_analysis(prompt, uploaded_file)
+            response_data = analyzer.prompt_analysis(PROMPT, uploaded_file)
+            
+            df = pd.DataFrame(response_data)
 
-            # Process the response data and display scores
-            # (you may need to adapt this part based on your response_data structure)
             st.subheader("Result")
-            st.write(response_data)
-            st.json(response_data)
+            st.dataframe(df)
+
+            csv_file = df.to_csv(index=False)
+            st.download_button(
+                label="Download CSV",
+                data=csv_file,
+                file_name='sentiment_results.csv',
+                key='download_button'
+)
 
 
 
