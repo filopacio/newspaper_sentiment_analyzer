@@ -34,6 +34,8 @@ def main():
             matches = re.findall(pattern, response_data, re.DOTALL)
             extracted_text = matches[0].strip().replace('json', '')
             data_dict = json.loads(extracted_text)
+            
+            st.write(uploaded_file)
 
             keys = list(data_dict.keys())
             values = list(data_dict.values())
