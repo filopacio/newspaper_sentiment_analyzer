@@ -12,6 +12,26 @@ negative and 1 extremely positive, for some user-defined categories taking into 
 
 ![Project Image](https://github.com/filopacio/newspaper_sentiment_analyzer/blob/main/data/repubblic.jpg)
 
+| Infos                     | Values       |
+|---------------------------|--------------|
+| date                      | 13-11-2023   |
+| newspaper                 | 1a Repubbiica|
+| War & Peace               | -0.7         |
+| Economic Stability        | -0.5         |
+| Technological Trends      | 0            |
+| Social Movements          | -0.5         |
+| Health & Epidemics        |   0          |
+| Political Dynamics        | -0.8         |
+| Cultural Shifts           | 0            |
+| Global Relations          | -0.3         |
+| Scientific Progress       | 0            | 
+| Education & Knowledge     | 0            | 
+| Religious Landscape       | 0            | 
+| Migrations & Immigration  | 0            |
+| Government Policies       | -0.8         |
+| Natural Disasters         | 0            |
+| Local Community Events    | 0            |
+
 ```python
 {   "date": "13-11-2023",
     "War & Peace": -0.8,
