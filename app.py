@@ -1,3 +1,4 @@
+import pandas as pd
 import streamlit as st
 from config.config import parameters
 from src.newspaper_analyzer import NewsPaperSentimentAnalyzer
