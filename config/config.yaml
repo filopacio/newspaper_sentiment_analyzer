@@ -22,12 +22,12 @@ sentiment_categories:
     - 'Local Community Events'
 
 prompt: "
-You are an historian analyzing sentiments in old newspapers. You will extract textual information only from the titles
-of the articles
+You are an expert of communication analyzing sentiments in newspapers.
+You will extract textual information only from the titles of the articles in the image furnished
 and you will extract insights on {} categories. You will assign a score to each of these categories from -1 to 1, where 
 -1 represent extreme negative sentiment and 1 extreme positive sentiment about that topic category. You MUST return 
 ONLY a dictionary with categories as keys and the scores as the values and two additional entries: 1: 'date' which will contain 
 the date of when the newspaper was written in the format '%d-%m-%yy' and will be the first key of the dictionary, 2: 'newspaper'
 whose value is the name of the newspaper from which the image furnished comes from and will be the second key of the dictionary. 
-The next entries will be the categories and corresponding values.
+The next entries will be the categories and corresponding values, for a total of 17 keys and values combination.
 Here are the categories: {}. It's of key importance that you return a proper answer with the information you have available."
