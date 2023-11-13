@@ -13,7 +13,7 @@ negative and 1 extremely positive, for some user-defined categories taking into 
 ![Project Image](https://github.com/filopacio/newspaper_sentiment_analyzer/blob/main/data/repubblic.jpg)
 
 ```python
-{   "date": "01-04-1915",
+{   "date": "13-11-2023",
     "War & Peace": -0.8,
     "Economic Stability": -0.3,
     "Technological Trends": 0.0,
