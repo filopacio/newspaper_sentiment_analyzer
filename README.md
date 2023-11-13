@@ -6,11 +6,11 @@ the full documents, but only titles and some other highlighted words. The idea i
 negative and 1 extremely positive, for some user-defined categories taking into account only most catchy titles and words.
 
 ## Website Link
-Go to [web app]([https://www.example.com](https://newspaper-sentiment-analyzer.streamlit.app/)) to test it yourself!
+[Click here to test it yourself!]([https://www.example.com](https://newspaper-sentiment-analyzer.streamlit.app/)) 
 
 ## Example
 
-![Project Image](https://www.example.com/images/project_image.jpg)
+![Project Image]([https://github.com/filopacio/newspaper_sentiment_analyzer/blob/main/data/repubblic.jpg])
 
 ## Code Sample
 ```python
