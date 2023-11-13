@@ -9,6 +9,7 @@ negative and 1 extremely positive, for some user-defined categories taking into 
 [Click here to test it yourself!](https://newspaper-sentiment-analyzer.streamlit.app/) 
 
 ## Example
+An image is given as input and a downloadable dataframe is returned as output.
 
 ### Input
 ![Project Image](https://github.com/filopacio/newspaper_sentiment_analyzer/blob/main/data/repubblic.jpg)
