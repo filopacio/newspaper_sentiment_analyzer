@@ -1,3 +1,4 @@
+import json
 import pandas as pd
 import streamlit as st
 from config.config import parameters
@@ -27,7 +28,7 @@ def main():
 
 
             response_data = analyzer.prompt_analysis(PROMPT, uploaded_file)
-            df = pd.DataFrame([response_data])
+            df = pd.DataFrame([response_data.json()])
 
             st.subheader("Result")
             st.dataframe(df)
