@@ -33,6 +33,7 @@ def main():
             # Process the response data and display scores
             # (you may need to adapt this part based on your response_data structure)
             st.subheader("Result")
+            st.write(response_data)
             st.json(response_data)
 
 
