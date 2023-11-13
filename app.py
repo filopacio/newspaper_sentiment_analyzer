@@ -28,7 +28,13 @@ def main():
 
 
             response_data = analyzer.prompt_analysis(PROMPT, uploaded_file)
-            df = pd.DataFrame([response_data.json()])
+            
+            pattern = r'```(.*?)```'
+            matches = re.findall(pattern, response_data, re.DOTALL)
+            extracted_text = matches[0].strip().replace('json', '')
+            data_dict = json.loads(extracted_text)
+            
+            df = pd.DataFrame([data_dict])
 
             st.subheader("Result")
             st.dataframe(df)
