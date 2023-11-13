@@ -21,13 +21,13 @@ def main():
 
     if uploaded_file:
         st.write("Image Uploaded. Press Analyze to get results.")
-
+        
         if st.button("Analyze"):
             analyzer = NewsPaperSentimentAnalyzer(api_key=API_KEY)
 
 
             response_data = analyzer.prompt_analysis(PROMPT, uploaded_file)
-            
+            st.write(response_data)
             df = pd.DataFrame(response_data)
 
             st.subheader("Result")
