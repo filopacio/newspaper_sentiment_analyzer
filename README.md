@@ -35,22 +35,3 @@ negative and 1 extremely positive, for some user-defined categories taking into 
 | Natural Disasters         | 0            |
 | Local Community Events    | 0            |
 
-```python
-{   "date": "13-11-2023",
-    "War & Peace": -0.8,
-    "Economic Stability": -0.3,
-    "Technological Trends": 0.0,
-    "Social Movements": 0.0,
-    "Health & Epidemics": 0.0,
-    "Political Dynamics": -0.5,
-    "Cultural Shifts": 0.0,
-    "Global Relations": -0.7,
-    "Scientific Progress": 0.0,
-    "Education & Knowledge": 0.0,
-    "Religious Landscape": 0.0,
-    "Migrations & Immigration": 0.0,
-    "Government Policies": -0.4,
-    "Natural Disasters": 0.0,
-    "Local Community Events": 0.0
-}
-```
