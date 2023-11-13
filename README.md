@@ -1,4 +1,4 @@
-# Newspaper Sentiment Analyzer With Computer Vision
+# Newspaper Sentiment Analyzer With Computer Vision API
 
 Implementing an app with Streamlit for computer vision using OpenAI Vision API.
 The goal is to compute Sentiment Analysis of newspapers pages from images. Note that it is not an OCR problem, the API does not read
