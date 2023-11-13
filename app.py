@@ -1,6 +1,7 @@
 import re
 import json
 import pandas as pd
+from PIL import Image
 import streamlit as st
 from config.config import parameters
 from src.newspaper_analyzer import NewsPaperSentimentAnalyzer
@@ -35,7 +36,8 @@ def main():
             extracted_text = matches[0].strip().replace('json', '')
             data_dict = json.loads(extracted_text)
             
-            st.write(uploaded_file)
+            image = Image.open(uploaded_file)
+            st.image(image, caption="Uploaded Image", use_column_width=True)
 
             keys = list(data_dict.keys())
             values = list(data_dict.values())
