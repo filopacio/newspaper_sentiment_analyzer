@@ -10,10 +10,10 @@ negative and 1 extremely positive, for some user-defined categories taking into 
 
 ## Example
 
-# Input
+### Input
 ![Project Image](https://github.com/filopacio/newspaper_sentiment_analyzer/blob/main/data/repubblic.jpg)
 
-# Results
+### Results
 
 | Infos                     | Values       |
 |---------------------------|--------------|
