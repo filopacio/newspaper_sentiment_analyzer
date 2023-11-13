@@ -28,4 +28,4 @@ and you will extract insights on {} categories. You will assign a score to each 
 -1 represent extreme negative sentiment and 1 extreme positive sentiment about that topic category. You MUST return 
 ONLY a dictionary with categories as keys and the scores as the values and an additional entry 'date' which will contain 
 the date of when the newspaper was written in the format '%d-%m-%yy' and will be the first key of the dictionary. Here 
-are the categories: {}"
+are the categories: {}. You MUST return a proper answer with the information you have available."
