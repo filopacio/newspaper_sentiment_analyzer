@@ -34,9 +34,13 @@ def main():
             matches = re.findall(pattern, response_data, re.DOTALL)
             extracted_text = matches[0].strip().replace('json', '')
             data_dict = json.loads(extracted_text)
-            
-            df = pd.DataFrame(data_dict)
 
+            keys = list(data_dict.keys())
+            values = list(data_dict.values())
+            
+            # Create DataFrame with two columns
+            df = pd.DataFrame({'Infos': keys, 'Values': values})
+            
             st.subheader("Result")
             st.dataframe(df)
 
