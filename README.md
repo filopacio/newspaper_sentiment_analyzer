@@ -15,7 +15,7 @@ negative and 1 extremely positive, for some user-defined categories taking into 
 | Infos                     | Values       |
 |---------------------------|--------------|
 | date                      | 13-11-2023   |
-| newspaper                 | 1a Repubbiica|
+| newspaper                 | la Repubbiica|
 | War & Peace               | -0.7         |
 | Economic Stability        | -0.5         |
 | Technological Trends      | 0            |
